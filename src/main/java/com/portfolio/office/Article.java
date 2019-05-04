@@ -1,9 +1,6 @@
 package com.portfolio.office;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Article {
@@ -15,10 +12,13 @@ public class Article {
 
     private String subtitle;
 
+    @Column(length=10485760)
     private String firstContent;
 
+    @Column(length=10485760)
     private String secondContent;
 
+    @Column(length=10485760)
     private String thirdContent;
 
     private Integer quest;
