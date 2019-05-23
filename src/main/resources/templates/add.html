@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Add</title>
-    <link rel="stylesheet" th:href="@{/css/add.css}">
+    <link rel="stylesheet" th:href="@{/add.css}">
 </head>
 <body>
 <form method="post">
-    <h1 style="text-align: center; color: cornflowerblue;">Регистрация</h1>
+    <h1 style="text-align: center; color: cornflowerblue;">Добавить место</h1>
     <label>
         <p class="label-txt">Введите название</p>
         <br>
@@ -19,47 +19,47 @@
     <label>
         <p class="label-txt">Введите краткий заголовок</p>
         <br>
-        <input type="text" name="shortTitle" class="input" >
+        <input type="text" name="subtitle" class="input" >
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">Введите содержание статьи</p>
+        <p class="label-txt">Введите первый раздел</p>
         <br>
-        <input type="text" name="content" class="input">
+        <input type="text" name="firstContent" class="input">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">Введите краткое содержание</p>
+        <p class="label-txt">Введите второй раздел</p>
         <br>
-        <input type="text" name="shortContent" class="input">
+        <input type="text" name="secondContent" class="input">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">Введите автора</p>
+        <p class="label-txt">Введите третий раздел</p>
         <br>
-        <input type="text" name="author" class="input" pattern="[а-яА-яa-zA-Z]+" required>
+        <input type="text" name="thirdContent" class="input">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">Введите дату</p>
+        <p class="label-txt">Введите номер квеста</p>
         <br>
-        <input type="text" name="date" class="input" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}" required>
+        <input type="text" name="quest" class="input">
         <div class="line-box">
             <div class="line"></div>
         </div>
     </label>
     <label>
-        <p class="label-txt">Введите тєг</p>
+        <p class="label-txt">Введите номер задания</p>
         <br>
-        <input type="text" name="tag" class="input" pattern="[а-яА-яa-zA-Z]+" required>
+        <input type="text" name="stage" class="input">
         <div class="line-box">
             <div class="line"></div>
         </div>

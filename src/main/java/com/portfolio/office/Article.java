@@ -1,6 +1,7 @@
 package com.portfolio.office;
 
 import javax.persistence.*;
+import java.sql.Blob;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Article {
@@ -24,6 +25,9 @@ public class Article {
     private Integer quest;
 
     private Integer stage;
+    @Lob
+    @Column
+    private Blob image;
 
     public Article(String title, String subtitle, String firstContent, String secondContent, String thirdContent, Integer quest, Integer stage) {
         this.title = title;
@@ -39,6 +43,9 @@ public class Article {
 
     }
 
+    public Article(Blob image){
+        this.image=image;
+    }
     public Integer getId() {
         return id;
     }
@@ -61,6 +68,14 @@ public class Article {
 
     public void setSubtitle(String subtitle) {
         this.subtitle = subtitle;
+    }
+
+    public Blob getImage() {
+        return image;
+    }
+
+    public void setImage(Blob image) {
+        this.image = image;
     }
 
     public String getFirstContent() {
