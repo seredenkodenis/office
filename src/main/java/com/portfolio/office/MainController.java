@@ -56,7 +56,6 @@ public class MainController {
 
     @GetMapping(path = "/upload")
     public String upload1(Model model){
-
         return "upload";
     }
 
@@ -71,6 +70,13 @@ public class MainController {
         return "upload";
     }
 
+
+    @GetMapping(path = "/image/{id}")
+    public String findArticle1(@PathVariable("id") Integer id, Model model){
+        Article article = articleRepository.findArticleById(id);
+        model.addAttribute("img",article.getId());
+        return "image";
+    }
 
     @GetMapping(path = "/article/{questId}/{stage}")
     public String findArticle(Model model, @PathVariable("questId") Integer questId, @PathVariable("stage") Integer stage){
